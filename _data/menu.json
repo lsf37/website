@@ -24,7 +24,7 @@
         "arrow-trending-up",
         "Roadmap",
         "Planned development & verification",
-        "/todo.html"
+        "/roadmap.html"
       ],
       [
         "bolt",
@@ -42,7 +42,7 @@
         "cpu-chip",
         "Supported Platforms",
         "Hardware and simulators seL4 runs on",
-        "/todo.html"
+        "/platforms.html"
       ],
       [
         "academic-cap",
