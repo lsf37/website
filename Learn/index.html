@@ -3,28 +3,18 @@
 # SPDX-License-Identifier: CC-BY-SA-4.0
 title: Learn
 redirect_from: /Learn/home.pml
-pre: "Learn about seL4"
-h1: "Resources for working with seL4 and its ecosystem"
+h1: "Manual, Documentation, Learning Material"
 sub: '
   <p>
-    We have developed a wide variety of educational resources about seL4 and its
-    ecosystem, ranging from hands-on tutorials to comprehensive documentation
-    and university courses. The links on this page provide alternate tools,
-    depending on your development goals.
+    Explore seL4 through the range of available educational material, from
+    hands-on tutorials and comprehensive documentation to research articles and
+    university courses, depending on your specific development goals.
    </p>'
 layout: card
 ---
 
 
 <div class="card-grid-3">
-  {% include card.html
-     icon="window"
-     title="Docsite"
-     body="A dedicated docsite for documentation and learning material. The
-     docsite is hosted on GitHub and maintained by the community."
-     link="https://docs.sel4.systems/"
-  %}
-
   {% include card.html
      icon="book-open"
      title="Manual"
@@ -35,12 +25,12 @@ layout: card
      link="https://sel4.systems/Info/Docs/seL4-manual-latest.pdf"
   %}
 
-  <!-- FIMXE: need to update spec, ARMv6 is no longer supported -->
   {% include card.html
-     icon="rectangle-group"
-     title="Specs"
-     body="Abstract Formal Specification of the seL4/ARMv6 API."
-     link="https://sel4.systems/Info/Docs/seL4-spec.pdf"
+     icon="window"
+     title="Docsite"
+     body="A dedicated docsite for documentation and learning material. The
+     docsite is hosted on GitHub and maintained by the community."
+     link="https://docs.sel4.systems/"
   %}
 
   {% include card.html
@@ -55,7 +45,8 @@ layout: card
   {% include card.html
     icon="document"
     title="Key Publications"
-    body="Key papers and articles about seL4 technology, design principles, applications, etc."
+    body="Key research articles about the seL4 technology, its design
+    principles, verification, and applications."
     link="../Research/publications.html"
  %}
 
@@ -65,7 +56,15 @@ layout: card
   body="Courses about seL4-relevant topics: operating systems, microkernels,
   formal methods, software verification."
   link="../Research/courses.html"
-%}
+  %}
+
+ {% include card.html
+  icon="question-mark-circle"
+  title="FAQ"
+  body="Detailed list of frequently asked questions about seL4, and their
+  answers."
+  link="../About/FAQ.html"
+  %}
 </div>
 
 
