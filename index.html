@@ -97,7 +97,7 @@ redirect_from: /home.pml
         user-level Operating Systems components, and applications.
       </p>
     "
-  link="#"
+  link="Foundation/Services/"
   img="images/tries-shutterstock/providers.jpg"
   alt="Commercial support"
 %}
@@ -109,10 +109,11 @@ redirect_from: /home.pml
   h2="Backed by an Open Source Foundation"
   text="
       <p>
-        seL4 is open source. It is supported by the seL4 Foundation, an open,
-        transparent and neutral organisation that ensures seL4’s assurance
-        claims, straightforward deployability and a diverse and stable ecosystem
-        of services and products.
+        seL4 is open source, supported by the seL4 Foundation, an open,
+        transparent and neutral organisation. The seL4 Foundation’s goal is to
+        ensure that seL4 continues to be the most highly-assured
+        operating-system technology, and that it is also readily deployable with
+        a diverse and stable ecosystem of supporting services and products.
       </p>
       <p>
         seL4 is free to use. Foundation memberships support the maintenance and
@@ -142,7 +143,7 @@ redirect_from: /home.pml
         Community contributions are more frequent, and provide frameworks, tools
         and components that increase the ease of adoption and migration of seL4.
       </p>"
-  link="#"
+  link="Contribute/"
   img="images/tries-shutterstock/world.jpg"
   alt="Ecosystem"
 %}
@@ -196,7 +197,7 @@ redirect_from: /home.pml
         formal proofs are constantly maintained and kept in lock-step with the
         seL4 code.
       </p>"
-  link="#"
+  link="roadmap.html"
   img="images/tries-shutterstock/roadmap.jpg"
   alt="seL4 roadmap"
 %}
@@ -249,14 +250,16 @@ redirect_from: /home.pml
         {% endunless %}
         <div class="relative flex items-start space-x-3">
           <div class="relative">
-            <div class="-mt-3 p-2 bg-slate-200 dark:bg-slate-600 rounded-full">
-              {%- svg _icons/megaphone.svg class="block h-8 w-8" -%}
-            </div>
+            <a href="{{ item_link }}">
+              <div class="-mt-3 p-2 bg-slate-200 dark:bg-slate-600 rounded-full">
+                {%- svg _icons/megaphone.svg class="block h-8 w-8" -%}
+              </div>
+            </a>
           </div>
           <div class="min-w-0 flex-1">
             <div>
               <div class="text-sm">
-                <a href="{{ item_link }}" class="font-medium text-dark">{{news_item.title}}</a>
+                <a href="{{ item_link }}" class="font-medium text-dark hover:underline">{{news_item.title}}&nbsp;&rightarrow;</a>
               </div>
               <p class="mt-0.5 text-sm text-gray-500 dark:text-gray-600">{{date}}</p>
             </div>

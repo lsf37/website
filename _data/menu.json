@@ -24,7 +24,7 @@
         "arrow-trending-up",
         "Roadmap",
         "Planned development & verification",
-        "/todo.html"
+        "/roadmap.html"
       ],
       [
         "bolt",
@@ -42,7 +42,7 @@
         "cpu-chip",
         "Supported Platforms",
         "Hardware and simulators seL4 runs on",
-        "/todo.html"
+        "/platforms.html"
       ],
       [
         "academic-cap",
@@ -67,8 +67,8 @@
       [
         "book-open",
         "Manual & Documentation",
-        "Dedicated seL4 documentation site",
-        "https://docs.sel4.systems"
+        "Manual, Tutorials, Documentation",
+        "/Learn/"
       ],
       [
         "question-mark-circle",
@@ -149,7 +149,7 @@
         "rocket-launch",
         "Commercial Support",
         "Endorsed Service Providers for seL4",
-        "/todo.html"
+        "/Foundation/Services/"
       ],
       [
         "lifebuoy",
