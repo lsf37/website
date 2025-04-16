@@ -40,7 +40,7 @@
       ],
       [
         "cpu-chip",
-        "Supported Platforms",
+        "Platform Support Overview",
         "Hardware and simulators seL4 runs on",
         "/platforms.html"
       ],
