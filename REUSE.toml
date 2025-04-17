@@ -237,11 +237,9 @@ SPDX-License-Identifier = "LicenseRef-Wordcloud"
 
 
 [[annotations]]
-path = "images/boeing-ulb-helicopter.jpg"
-SPDX-FileCopyrightText = TODO
-SPDX-License-Identifier = TODO-PublicDomain
-from ="https://commons.wikimedia.org/wiki/File:US_Navy_090616-M-9917S-144_The_Unmanned_Little_Bird_(ULB)_helicopter,_a_smaller_variant_of_the_larger,_manned_A-MH-6M_can_be_controlled_by_a_pilot_or_piloted_remotely.jpg"
-
+path= "arc-logo.svg"
+SPDX-FileCopyrightText = "Copyright Australian Research Council"
+SPDX-License-Identifier = "SPDX-License-Identifier: LicenseRef-ARC"
 
 
 [[annotations]]
@@ -257,4 +255,14 @@ SPDX-License-Identifier = "LicenseRef-UsedWithPermission"
 [[annotations]]
 path = "images/use-vm-composer.jpg"
 SPDX-FileCopyrightText = "Copyright 2025 Dornerworks"
+SPDX-License-Identifier = "LicenseRef-UsedWithPermission"
+
+[[annotations]]
+path = "images/hacms-award.jpg"
+SPDX-FileCopyrightText = "Copyright 2023 John Launchbury"
+SPDX-License-Identifier = "LicenseRef-UsedWithPermission"
+
+[[annotations]]
+path = "smaccmcopter-defcon.jpg"
+SPDX-FileCopyrightText = "Copyright 2021 DARPA"
 SPDX-License-Identifier = "LicenseRef-UsedWithPermission"
