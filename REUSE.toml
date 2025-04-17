@@ -235,6 +235,15 @@ path = "images/wordcloud-summit-participants-sponsors.svg"
 SPDX-FileCopyrightText =  "2025 seL4 Project a Series of LF Projects, LLC."
 SPDX-License-Identifier = "LicenseRef-Wordcloud"
 
+
+[[annotations]]
+path = "images/boeing-ulb-helicopter.jpg"
+SPDX-FileCopyrightText = TODO
+SPDX-License-Identifier = TODO-PublicDomain
+from ="https://commons.wikimedia.org/wiki/File:US_Navy_090616-M-9917S-144_The_Unmanned_Little_Bird_(ULB)_helicopter,_a_smaller_variant_of_the_larger,_manned_A-MH-6M_can_be_controlled_by_a_pilot_or_piloted_remotely.jpg"
+
+
+
 [[annotations]]
 path = "images/mep-surevoice.jpg"
 SPDX-FileCopyrightText = "Copyright 2025 MEP"
