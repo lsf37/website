@@ -87,7 +87,7 @@ checklinks:
 	@bundle exec htmlproofer $(HTMLPROOFEROPT) _site
 
 validate:
-	# ignore errors from inline SVG files
+# ignore errors from inline SVG files
 	@html5validator --root _site \
 					--ignore 'is not a "color" value' \
 							 'not allowed on element "svg"' \
