@@ -195,7 +195,7 @@ of page.
         ecosystem.
       </p>"
   link="#"
-  img="images/tries-shutterstock/cpu.jpg"
+  img="images/cpu.jpg"
   alt="Critical system"
 %}
 ```

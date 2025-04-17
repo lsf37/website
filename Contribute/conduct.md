@@ -5,7 +5,7 @@ pre: "Contributing to seL4"
 pre_link: "./"
 title: seL4 Code of Conduct
 sub: "Be nice, considerate, and constructive."
-img: /images/tries-shutterstock/stock-photo-stone-with-a-painted-smile-on-the-shore-one-stone-stands-out-from-the-others-on-a-small-stone-is-1474701353.jpg
+img: /images/stone-with-a-painted-smile.jpg
 img_class: "w-2/3 mx-auto rounded-lg object-cover aspect-16/9"
 ---
 
