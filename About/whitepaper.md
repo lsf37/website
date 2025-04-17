@@ -65,7 +65,7 @@ The figure below shows one of the uses for seL4: isolation between trusted and
 untrusted components in a system, including full virtual machines.
 
 <div class="w-2/3 my-6 mx-auto aspect-3/2">
-{% svg /images/tries-shutterstock/sel4-principles.drawio.svg width="100%" %}
+{% svg /images/sel4-principles.drawio.svg width="100%" %}
 </div>
 
 In the diagram, the seL4 kernel is the layer directly above the hardware and

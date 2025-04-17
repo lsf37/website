@@ -125,16 +125,30 @@ SPDX-License-Identifier = "BSD-2-Clause"
 
 [[annotations]]
 path = [
+    "images/certif-cc-adv.drawio.svg",
+    "images/certif-cc-comparison.drawio.svg",
+    "images/certif-do178c-objectives1.drawio.svg",
+    "images/certif-do178c-objectives2.drawio.svg",
+    "images/certif-do330-tql.drawio.svg",
+    "images/certif-iso-asil.drawio.svg",
+    "images/certif-iso-fm.drawio.svg",
+    "images/monolithic-vs-mkernel.drawio.svg",
     "images/pr.svg",
     "images/res_paper.svg",
     "images/screenshot-isabelle-dark.png",
     "images/screenshot-kernel-elf.png",
     "images/screenshot-proofs.png",
+    "images/screenshot-sel4-github.png",
     "images/code-skewed.png",
     "images/git-commits.svg",
     "images/licensing.drawio.svg",
     "images/0sorries.jpg",
     "images/award.jpeg",
+    "images/proof-stack.drawio.svg",
+    "images/sel4-fast.svg",
+    "images/sel4-principles.drawio.svg",
+    "images/seL4-sepia.svg",
+    "images/sel4-use-example.drawio.svg",
     "_icons/other/registered-tm.svg",
 ]
 SPDX-FileCopyrightText = "Copyright 2025 Proofcraft Pty ltd"
@@ -215,3 +229,23 @@ SPDX-License-Identifier = "LicenseRef-YouTubeLogo"
 path = "_icons/other/python-logo-only.svg"
 SPDX-FileCopyrightText = "Copyright 2025 Python Software Foundation"
 SPDX-License-Identifier = "LicenseRef-PythonLogo"
+
+[[annotations]]
+path = "images/wordcloud-summit-participants-sponsors.svg"
+SPDX-FileCopyrightText =  "2025 seL4 Project a Series of LF Projects, LLC."
+SPDX-License-Identifier = "LicenseRef-Wordcloud"
+
+[[annotations]]
+path = "images/mep-surevoice.jpg"
+SPDX-FileCopyrightText = "Copyright 2025 MEP"
+SPDX-License-Identifier = "LicenseRef-UsedWithPermission"
+
+[[annotations]]
+path = "images/mep-surevoice.jpg"
+SPDX-FileCopyrightText = "Copyright 2025 MEP"
+SPDX-License-Identifier = "LicenseRef-UsedWithPermission"
+
+[[annotations]]
+path = "images/use-vm-composer.jpg"
+SPDX-FileCopyrightText = "Copyright 2025 Dornerworks"
+SPDX-License-Identifier = "LicenseRef-UsedWithPermission"
