@@ -4,9 +4,10 @@
 title: Register for the seL4 Summit!
 anchor: registration-open
 
-link: /Foundation/Summit/2022/
+link: ../Foundation/Summit/2022/
 img: /images/sel4-summit-logo.svg
 alt: seL4 Summit
+dark: true
 ---
 
 This hybrid event will be held in Munich, Germany, 10-13 October 2022.

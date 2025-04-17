@@ -7,6 +7,7 @@ anchor: summit-2023-venue
 link: ../Foundation/Summit/2023
 img: /images/sel4-summit-logo.svg
 alt: seL4 Summit logo
+dark: true
 ---
 
 The [seL4 Summit 2023](../Foundation/Summit/2023) will be held **19 - 21
