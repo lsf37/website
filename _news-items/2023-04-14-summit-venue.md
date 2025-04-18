@@ -4,7 +4,7 @@
 title: 'Dates and venue confirmed for the <a href="../Foundation/Summit/2023/">seL4 Summit 2023</a>'
 anchor: summit-2023-venue
 
-link: ../Foundation/Summit/2023
+link: /Foundation/Summit/2023
 img: /images/sel4-summit-logo.svg
 alt: seL4 Summit logo
 dark: true
