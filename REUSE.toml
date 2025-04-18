@@ -248,11 +248,6 @@ SPDX-FileCopyrightText = "Copyright 2025 MEP"
 SPDX-License-Identifier = "LicenseRef-UsedWithPermission"
 
 [[annotations]]
-path = "images/mep-surevoice.jpg"
-SPDX-FileCopyrightText = "Copyright 2025 MEP"
-SPDX-License-Identifier = "LicenseRef-UsedWithPermission"
-
-[[annotations]]
 path = "images/use-vm-composer.jpg"
 SPDX-FileCopyrightText = "Copyright 2025 Dornerworks"
 SPDX-License-Identifier = "LicenseRef-UsedWithPermission"
