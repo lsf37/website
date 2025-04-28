@@ -1,40 +1,174 @@
 [
-	["/", "Home"],
-	["/About/", "What is seL4?", [
-			["/About/", "What is seL4?"],
-			["/About/Performance/", "Performance"],
-			["/About/seL4-whitepaper.pdf", "Whitepaper"]
-		]
-	],
-	["/Foundation/", "seL4 Foundation", [
-			["/Foundation/", "About the seL4 Foundation"],
-			["/Foundation/Governance/"],
-			["/Foundation/Board/", "Governing Board"],
-			["/Foundation/TSC/"],
-			["/Foundation/Membership/"],
-			["/Foundation/Join/", "Join the Foundation now!"],
-			["/Foundation/Services/", "Commercial Support"],
-			["/Foundation/Summit/2025/", "seL4 Summit"],
-			["/Foundation/Support/", "Support Us"],
-			["/Foundation/Trademark/"],
-			["/Foundation/Jobs/", "Jobs in the seL4 ecosystem"],
-			["/Foundation/Contact/", "Contact the seL4 Foundation"]
-		]
-	],
-	["/contact/", "Stay in Touch"],
-	["/Contribute/", "Contribute", [
-			["/Contribute/"],
-			["https://github.com/seL4", "GitHub"]
-		]
-	],
-	["/Use/"],
-	["/Learn/"],
-	["/Info/", "More Info", [
-			["/Info/", "More Info"],
-			["https://docs.sel4.systems/projects/sel4/frequently-asked-questions.html", "FAQ"],
-			["https://docs.sel4.systems/projects/roadmap.html", "Roadmap"],
-			["/Info/more-research.html", "Research"]
-		]
-	],
-	["/news/", "News"]
+  [
+    "About", " seL4",
+    [
+      [
+        "light-bulb",
+        "What is seL4?",
+        "History, Fact Sheet, White Paper. How to use seL4 in your system.",
+        "/About/"
+      ],
+      [
+        "user-group",
+        "Who is using seL4?",
+        "Where seL4 is used and deployed world wide",
+        "use.html"
+      ],
+      [
+        "check-circle",
+        "Verification",
+        "seL4 Proofs; implications for seL4-based systems and certification",
+        "/Verification/"
+      ],
+      [
+        "arrow-trending-up",
+        "Roadmap",
+        "Planned development & verification",
+        "/roadmap.html"
+      ],
+      [
+        "bolt",
+        "Performance",
+        "The numbers on the world's fastest kernel",
+        "performance.html"
+      ],
+      [
+        "scale",
+        "License, Trademark & Logo",
+        "seL4 License and Implications; Trademark Compliance Guide",
+        "/Legal/"
+      ],
+      [
+        "cpu-chip",
+        "Platform Support Overview",
+        "Hardware and simulators seL4 runs on",
+        "platforms.html"
+      ],
+      [
+        "academic-cap",
+        "Research",
+        "Seminal seL4 Publications; Ongoing Research; Courses in the Ecosystem",
+        "/Research/"
+      ],
+      [
+        "squares-plus",
+        "Frameworks & Languages",
+        "Frameworks, Tools, OS Personalities, Components, Language Support",
+        "tools.html"
+      ],
+      [
+        "building-library",
+        "seL4 Foundation",
+        "Members, Board, and Technical Steering Committee",
+        "/Foundation/"
+      ]
+    ],
+    [
+      [
+        "book-open",
+        "Manual & Documentation",
+        "Manual, Tutorials, Documentation",
+        "/Learn/"
+      ],
+      [
+        "question-mark-circle",
+        "FAQ",
+        "Frequently Asked Questions",
+        "/About/FAQ.html"
+      ]
+    ]
+  ],
+  [
+    "Contribute", "",
+    [
+      [
+        "arrow-path",
+        "Contribution Guidelines",
+        "Overview on how to contribute to seL4",
+        "/Contribute/"
+      ],
+      [
+        "shield-check",
+        "Code of Conduct",
+        "Rules for interaction",
+        "/Contribute/conduct.html"
+      ],
+      [
+        "command-line",
+        "Coding Conventions & Requirements",
+        "Requirements for C Code, Git Commits, Pull Requests",
+        "/Contribute/conventions.html"
+      ],
+      [
+        "chat-bubble-left-right",
+        "RFC Process",
+        "When and how to write an RFC",
+        "/Contribute/rfc-process.html"
+      ],
+      [
+        "wrench-screwdriver",
+        "Platform Contributions",
+        "Contributing and maintaining a platform port",
+        "/Contribute/platform-ports.html"
+      ],
+      [
+        "users",
+        "Development Roles",
+        "Contributors, Reviewers, Committers, TSC",
+        "/Contribute/roles.html"
+      ]
+    ]
+  ],
+  [
+    "News", " & Events",
+    [
+      [
+        "megaphone",
+        "News",
+        "News about seL4 and the seL4 Foundation",
+        "/news/"
+      ],
+      [
+        "user-group",
+        "seL4 Summit 2025",
+        "The seL4 event of the year",
+        "/Summit/2025/"
+      ],
+      [
+        "backward",
+        "Previous seL4 Summits",
+        "All seL4 summits since 2022",
+        "/Summit/"
+      ],
+      [
+        "envelope",
+        "Stay Informed",
+        "Announcement mailing list and other channels to stay informed",
+        "stay-informed.html"
+      ]
+    ]
+  ],
+  [
+    "Contact", " & Support",
+    [
+      [
+        "rocket-launch",
+        "Commercial Support",
+        "Endorsed Service Providers for seL4",
+        "/Services/"
+      ],
+      [
+        "lifebuoy",
+        "Help & Open Source Support",
+        "Mailing lists, Forum, Chat, Developer Hangouts",
+        "support.html"
+      ],
+      [
+        "user",
+        "Contact a Person",
+        "seL4 Foundation, Security Contact, Moderation",
+        "contact.html"
+      ]
+    ]
+  ]
 ]

@@ -1,0 +1,23 @@
+{%- comment %}
+Copyright 2025 Proofcraft Pty Ltd
+SPDX-License-Identifier: CC-BY-SA-4.0
+{% endcomment -%}
+
+{% assign month-year = include.date | date: "%B, %Y" %}
+{% capture description %}
+<p>{{ include.authors }}</p>
+<p class="mt-1">{{ include.details }}, {{ month-year }}</p>
+{%- if include.award -%}
+<p class="mt-1 text-f_green-500 dark:text-logogreen">{{ include.award }}</p>
+{% endif %}
+{% endcapture %}
+{% assign extra = '&nbsp; ' | append: include.explanation %}
+{% assign title = '<a href="pdfs/' | append: include.pdf | append: '">'
+                  | append: include.title | append: "</a>" %}
+{% include timeline-item.html
+  date=include.date
+  after_year=extra
+  title=title
+  title_class="mt-4 text-medium text-base leading-7 tracking-tight text-light"
+  description=description
+%}

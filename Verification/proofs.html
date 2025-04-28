@@ -1,0 +1,245 @@
+---
+# Copyright 2020 seL4 Project a Series of LF Projects, LLC.
+# SPDX-License-Identifier: CC-BY-SA-4.0
+title: seL4 Proofs
+pre: 'seL4 Verification'
+pre_link: ./
+sub: '
+  <p>seL4 has machine-checked mathematical proofs for the Arm, RISC-V, and Intel
+  architectures. This page describes the
+  <a href="#statements">high-level proof statements</a> and
+  <a href="#strength">how strong</a> the proofs are.
+ </p><p class="mt-2">
+  To find out even more about the verification, also check out the
+  <a href="../About/FAQ.html#verification">FAQ&apos;s verification section</a>.
+  </p>
+'
+img: /images/screenshot-isabelle-dark.png
+img_alt: "Screenshot of the main theorem in the seL4 C refinement proofs"
+img_class: "w-2/3 mx-auto"
+layout: card
+---
+
+{% include section-start.html
+  heading='High-level Proof Statements'
+  id='statements'
+ %}
+
+<div class="theprose">
+<p>
+  The seL4 proofs span the following top-level properties.
+</p>
+
+<div class="mx-auto w-4/5 pl-2 aspect-2/1">
+{% svg images/proof-stack.drawio.svg width="100%" %}
+</div>
+
+<ul class="mt-10 space-y-8 text-light">
+  {% include green-tick-li.html
+      bold="Functional correctness:"
+      text="the C code of all verified
+      configurations of seL4 behaves precisely as specified in the seL4
+      specification and nothing more.
+      This is the strongest assurance that the code will not have any
+      unspecified behaviour."
+  %}
+  {% include green-tick-li.html
+      bold="Binary correctness:"
+      text="in the configurations that support this property, the binary machine
+      code running on the processor correctly implements the behaviour of the C code assumed
+      in the functional correctness proof. By extension, this means the binary code
+      implements precisely the behaviour of the specification, and nothing more."
+  %}
+  {% include green-tick-li.html
+      bold="Security:"
+      text="
+      in the configurations that support this property, the specification, and
+      by extension the kernel code, prevents an application running on top of seL4
+      from modifying data without authorisation (integrity), from interfering
+      with resource access of other applications (availability), and from
+      learning information from other applications without explicit authorisation
+      (confidentiality). Together these security properties enforce the
+      <strong>isolation</strong> of components running on top of the kernel,
+      allowing critical components to securely run alongside untrusted
+      software."
+  %}
+  {% include green-tick-li.html
+      bold="System initialisation:"
+      text="
+      the proofs above show that seL4 provides strong security &mdash; when used
+      correctly. The security theorem statements provide requirements on how
+      the system must be set up. For instance, for integrity to hold, isolated
+      components cannot be given write access to each other, and confidentiality holds
+      between security domains of seL4's domain scheduler, not between arbitrary
+      threads. In the configurations that support verified system
+      initialisation, the seL4 proof stack has further parts that help with the
+      task of setting up systems correctly: the <em>capDL</em> specification
+      language that lets developers describe access control configurations
+      statically, and the user-level <em>system initialiser</em> that takes
+      those descriptions, and automatically configures the system to provably
+      conform to them at boot time."
+  %}
+</ul>
+
+<p>
+  Note that not all properties are available on all platforms and all
+  configurations. See the list of
+  <a href="https://docs.sel4.systems/projects/sel4/verified-configurations.html">verified
+  configurations</a> for the current status of what is available.
+</p>
+<p>
+  The properties listed above are what the proofs show directly. A side effect
+  of the strength of these statements is that they also imply that <strong>seL4
+  is free from whole classes of common programming errors such as buffer
+  overflows, null pointer dereferences, memory leaks, arithmetic exceptions or
+  undefined behaviour</strong>. See the page on <a
+  href="implications.html">proof implications</a> for more.
+</p>
+<p>
+  As with all proofs, there are still <a href="assumptions.html">assumptions</a>
+  that must be met, and there may still be user expectations on kernel behaviour
+  that are not captured by the properties proved so far. Nevertheless, this
+  degree of strong evidence for security and correct functionality has never
+  been achieved before for an OS kernel and is still unrivalled.
+</p>
+
+</div>
+{% include section-end.html %}
+
+
+{% include section-start.html
+  heading='How Strong are the Proofs?'
+  id='strength'
+%}
+
+<div class="theprose">
+
+<p>
+  We claim that seL4 has world's highest level of assurance for an operating
+  system kernel. On the research level, this is substantiated by the following
+  facts:
+</p>
+<ul class="mt-6 space-y-8 text-light">
+  {% include green-tick-li.html
+      text='formal verification in general is stronger than other
+      traditional ways of gaining trust in software such as testing in that
+      it can prove the <em>absence</em> of bugs, not just their
+      presence.'
+  %}
+  {% include green-tick-li.html
+      text='within systems that are claimed to be formally verified,
+      seL4&apos;s proof stack goes down to the binary code. This massively
+      reduces the <a href="assumptions.html">assumptions</a> it relies
+      on, compared to verification projects where the system model
+      stays at a more abstract level.'
+  %}
+  {% include green-tick-li.html
+      text='within existing formal verification approaches, the seL4 proofs
+      target strong properties, such as functional correctness and explicit
+      security theorems. More traditional techniques such as static analysis
+      often only target the absence of specific classes of programming errors,
+      which are <a href="implications.html">implied</a> by the seL4 proofs.'
+  %}
+  {% include green-tick-li.html
+      text='within tools that can be used for formal machine-checked proof,
+      the seL4 proofs use the proof
+      assistant <a href="https://isabelle.in.tum.de">Isabelle/HOL</a>,
+      which is engineered to minimise the code that needs to trusted for
+      the proof to be correct &mdash; see more on
+      the <a href="assumptions.html">assumptions</a> page.'
+  %}
+</ul>
+<p>
+  This means in all dimensions of measuring the strength of formal verification,
+  detail of model, depth of property, and correctness of the prover, seL4 is on
+  the highest levels.
+</p>
+<p>
+  All these arguments are nice, but they are abstract. There is something more
+  concrete: we can measure how strong these proofs are in practice.
+</p>
+<p>
+  Before we turn to seL4 itself, there is a <a
+  href="https://users.cs.utah.edu/~regehr/papers/pldi11-preprint.pdf">research
+  paper</a> about <em>Finding and Understanding Bugs in C Compilers</em> that
+  makes empirical observations about the CompCert C compiler. Like seL4,
+  CompCert also comes with a functional correctness proof, and this is what the
+  authors find:
+</p>
+
+<blockquote>
+    The striking thing about our CompCert results is that the middle-end
+    bugs we found in all other compilers are absent. As of early 2011,
+    the under-development version of CompCert is the only compiler we
+    have tested for which Csmith cannot find wrong-code errors. This is
+    not for lack of trying: we have devoted about six CPU-years to the
+    task.
+</blockquote>
+
+
+<p>
+  Now turning towards seL4, there are test suites in addition to the
+  formal verification:  one for <a
+  href="https://github.com/seL4/sel4bench/">performance tests</a>
+  and one for <a href="https://github.com/seL4/sel4test">functional tests</a>.
+</p>
+<p>Why have these if there is formal verification? Here are some of the classes
+  that are still interesting to test:</p>
+<ul>
+  <li>
+    Code in the verified kernel that is left as
+    an <a href="assumptions.html">assumption</a>, e.g. machine interfaces such
+    as caching. These can be tested and have a fairly high density of tests.
+  </li>
+
+  <li>
+    Code in unverified configurations of the kernel — things that are either not yet
+    verified or are only for debugging or are for platforms/configuration
+    combinations that are unverified.
+  </li>
+
+  <li>
+    Tests for verified code to confirm expectations: this is testing the
+    specification. It is less about coverage, more about usability and
+    confirming that the API is what the developers were intending, as opposed to
+    what the specification says or what is implemented. It is also helpful when
+    such tests break on code changes before these are verified.
+  </li>
+</ul>
+
+<p>
+  In addition to the test suites, there are also integration tests with various
+  user-level libraries and frameworks to make sure that they still work (or are
+  updated appropriately) when we make a change to the kernel API.
+</p>
+
+<p>
+  This means there are a lot of tests that run frequently, hundreds for every
+  code change. seL4 also has been in continued deployment for over a decade.
+  This gives us some data.
+</p>
+
+<p>
+  In all this time, <strong>there have been no functional correctness defects in
+  verified code since the functional correctness proof completed in 2009</strong>
+  &mdash; more than 15 years of tests, use, and deployment. There have also
+  never been any integrity defects in verified code since the integrity proofs
+  finished, and so on.
+</p>
+
+<p>
+  To contrast how remarkable 0 defects in 15 years are: defect density in
+  unverified configurations of seL4 is overall lower than in normal software,
+  but it is not zero. This means there have been defects discovered even in
+  mature unverified configurations of the kernel (e.g. multicore SMP, or x64
+  VT-x virtualisation extensions), and even in verified configurations we have
+  detected small defects in every class of unverified code in the kernel in that
+  time &mdash; hardware assumptions, compiler assumptions, unverified boot code.
+  As the saying goes: everything that can go wrong will eventually go wrong. All
+  the more remarkable that in the entire 10,000 lines of verified code
+  <strong>nothing</strong> has gone wrong in all that time. This is not
+  surprising, we have a proof for that after all, but it can be hard to grasp.
+</p>
+</div>
+
+{% include section-end.html %}

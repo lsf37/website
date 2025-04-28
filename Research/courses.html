@@ -1,0 +1,99 @@
+---
+# Copyright 2020 seL4 Project a Series of LF Projects, LLC.
+# SPDX-License-Identifier: CC-BY-SA-4.0
+title: seL4-related Courses
+pre: "seL4 research"
+pre_link: "./"
+sub: '
+  <p>
+    We provide learning material including <a href="https://docs.sel4.systems/Tutorials/">tutorials on the
+    docsite</a>, but if you are interested in deeper University courses, this
+    page lists the most relevant to seL4. These include lectures on both
+    Operating Systems and Formal Software Verification. If you would like a
+    course to be added to this list, please contact us at
+    <a title="foundation@sel4.systems"
+    href="mailto:foundation@sel4.systems">foundation@sel4.systems</a>.
+  </p>
+  <img src="../images/courses.jpg"
+       alt="students in a classroom"
+       class="rounded-lg mt-8">'
+layout: card
+---
+
+
+
+
+{% capture button %}
+Go to course site &nbsp;
+{% svg _icons/other/external.svg class="inline-icon" %}
+{% endcapture %}
+
+{% include feature.html
+  right=true
+  up=true
+  h2="Advanced Operating Systems"
+  text='
+  <p>
+    The course, offered at UNSW Sydney, Australia, provides students with a
+    deep understanding of modern operating system technology, implementation
+    techniques and research issues. It develops general “systems skills”,
+    the ability to design, implement and understand a complex software
+    system. It specifically provides a thorough understanding of low-level
+    system software and its interaction with hardware, the trade-offs that
+    determine system performance, techniques to assess performance
+    correctly, and the impact of system design on security. The course is
+    based on seL4 and students build an seL4-based operating system. Free
+    videos of the lectures are available <a
+    href="https://www.youtube.com/playlist?list=PLtoQeavghzr3nlXyJEXaTLU9Ca0DXWMnt">online</a>.
+  </p>'
+  link="https://www.cse.unsw.edu.au/~cs9242/"
+  button=button
+  img="/Foundation/Membership/LOGOS/UNSW.svg"
+  img_class="p-white"
+  alt="UNSW Logo"
+%}
+
+{% include feature.html
+  right=true
+  up=true
+  h2="Advanced Topics in Software Verification"
+  text="
+  <p>
+    This course, offered at UNSW Sydney, Australia, is about mechanical
+    proof assistants, how they work, and what they can be used for.  It
+    presents specification and proof techniques used in industrial grade
+    interactive theorem provers, teaches the theoretical background to the
+    techniques involved, and shows how to use a theorem prover to conduct
+    formal proofs in practice.  Topics include higher order logic, natural
+    deduction, lambda calculus, term rewriting, data types and recursive
+    functions, induction principles, and proofs about programs. The course
+    provides hands-on experience with the proof assistant Isabelle/HOL,
+    which is used in the verification of seL4. The slides are available for
+    free from the course website.
+  </p>"
+  link="https://www.cse.unsw.edu.au/~cs4161"
+  button=button
+  img="/Foundation/Membership/LOGOS/UNSW.svg"
+  img_class="p-white"
+  alt="UNSW Logo"
+%}
+
+{% include feature.html
+  right=true
+  up=true
+  h2="Concrete Semantics with Isabelle/HOL"
+  text="
+  <p>
+    This book introduces semantics of programming languages through the medium
+    of the proof assistant Isabelle/HOL, which is used in the verification of
+    seL4. The book consists of two parts: a self-contained introduction to the
+    proof assistant Isabelle, and an introduction to semantics and its
+    applications. It contains 115 exercises that provide hands-on experience
+    with Isabelle. Extensively classroom-tested slides are also available.
+   </p>"
+  link="http://www.concrete-semantics.org"
+  button=button
+  img="/images/concrete-semantics.jpg"
+  alt="Picture of the Concrete Semantics book"
+  img_class="p-white"
+%}

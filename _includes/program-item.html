@@ -1,0 +1,80 @@
+{%- comment %}
+Copyright 2025 seL4 Project a Series of LF Projects, LLC
+SPDX-License-Identifier: CC-BY-SA-4.0
+{% endcomment -%}
+
+{% if include.break %}
+  <div class="bg-slate-200 dark:bg-slate-700 col-span-4 text-gray-800 dark:text-gray-300 p-2">
+    {{include.break}}
+  </div>
+
+{% elsif include.day %}
+<div class="bg-slate-500 col-span-4 text-white p-2 mt-24">
+  Day {{include.day}}&emsp;{{include.date}}
+</div>
+
+{% elsif include.event %}
+  <div class="bg-slate-200 dark:bg-slate-700 col-span-4 text-gray-800 dark:text-gray-300 p-2">
+    <em>{{include.event}}</em>
+  </div>
+
+{% else %}
+  {% if include.id %}
+  <div id="{{ include.id }}">
+  {% else %}
+  <div>
+  {% endif %}
+    <span class="text-light text-sm sm:text-base">{{include.time}}</span>
+    {% if include.type %}
+    <br>
+    <span class="text-gray-500 text-sm sm:text-base">{{include.type}}</span>
+    {% endif %}
+  </div>
+
+  <div class="col-span-2">
+    {% if include.abstract %}
+        <a href="{{include.abstract}}" class="text-sm sm:text-base no-underline hover:underline">
+      {% endif %}
+        <span class="text-dark text-sm sm:text-base"><strong>{{include.title}}</strong></span>
+      {% if include.abstract %}
+        </a>
+      {% endif %}
+
+      {% if include.presenter %}
+        <br>
+        <span class="text-dark text-sm sm:text-base">{{include.presenter}}</span>,
+        <span class="text-light text-sm sm:text-base">{{include.affiliation}}</span>
+      {% endif %}
+
+
+     <div class="flex flex-row gap-x-2 pt-1 pb-5">
+        {% if include.youtube %}
+          <div class="p-1 pb-1">
+            <a href="{{include.youtube}}" target="_blank">
+              <img src="{{ '/images/icons/youtube_nobckgnd.svg' | relative_url }}"
+                   width="25" alt="YouTube icon"></a>
+          </div>
+        {% endif %}
+        {% if include.slides %}
+          <div class="p-1 mt-1">
+            <a href="{{include.slides}}" class="text-sm text-gray-500 underline">Slides</a>
+          </div>
+        {% endif %}
+        {% if include.abstract %}
+          <div class="p-1 mt-1">
+            <a href="{{include.abstract}}" class="text-sm text-gray-500 underline">Abstract</a>
+          </div>
+        {% endif %}
+      </div>
+
+      {% if include.info %}
+      {{ include.info }}
+      {% endif %}
+
+  </div>
+  <div class="text-right">
+    {% if include.chair %}
+    <span class="text-gray-500 text-sm sm:text-base">{{include.chair}}</span>
+    {% endif %}
+  </div>
+{% endif %}

@@ -1,9 +1,15 @@
+# Copyright 2020 seL4 Project a Series of LF Projects, LLC.
+# SPDX-License-Identifier: CC-BY-SA-4.0
+
 *~
 *.swp
 _site
 _preview
 _site_on_seL4
+_proofcraft
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+.npm_deps
 vendor
+node_modules

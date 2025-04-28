@@ -1,0 +1,35 @@
+{%- comment %}
+Copyright 2025 Proofcraft Pty Ltd
+SPDX-License-Identifier: CC-BY-SA-4.0
+{% endcomment -%}
+{%- if members.size >= 4 -%}
+{%- assign lg = "lg:grid-cols-4" -%}
+{%- endif %}
+<div class="mb-16 sm:mt-12 mr-4 md:ml-6 sm:grid sm:grid-cols-2 md:grid-cols-3 {{lg}} sm:gap-x-[4rem] sm:gap-y-[5rem]">
+{%- for member in members -%}
+{%-   assign logo = "/Foundation/Membership/LOGOS/" | append: member.logo | relative_url -%}
+  <div class="text-gray-600 mt-16 sm:mt-0">
+    <a href="{{ member.url }}">
+    <div class="mx-auto h-[5.5rem] w-[11rem] flex align-middle justify-center">
+      <img class="object-scale-down" src="{{ logo }}" alt="{{ member.name }}" title="{{ member.name }}">
+    </div>
+    <!-- div class="mt-6 text-lg font-semi-bold text-center">{{ member.name }}</div -->
+    </a>
+    <div class="mt-4 sm:mt-6 text-sm text-gray-500 w-[11rem] mx-auto text-nowrap">
+      {%- if member.founding -%}
+      <p>
+        {%- svg _icons/building-library.svg class="inline-icon h-4 w-4 mr-2" -%}
+        Founding member
+      </p>
+      {%- endif %}
+      {%- if member.endorsed -%}
+      <a href="{{ member.url }}">
+      <p>
+        {%- svg _icons/rocket-launch.svg class="inline-icon h-4 w-4 mr-2" -%}
+        Endorsed Service Provider
+      </p></a>
+      {%- endif %}
+    </div>
+  </div>
+{%- endfor -%}
+</div>

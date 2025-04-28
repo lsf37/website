@@ -21,6 +21,7 @@ defaults:
       path: ""
     values:
       layout: "default"
+      background: true
 
 # Build settings
 
@@ -29,11 +30,13 @@ plugins:
   - jekyll-sitemap
   # Allow multiple urls to redirect to a single page
   - jekyll-redirect-from
+  # For tailwind postcss
+  - jekyll-postcss-v2
+  # For icons
+  - jekyll-inline-svg
+  # Generate table of contents for toc: true in the frontmatter
+  - jekyll-toc
 
-breadcrumbs:
-  root:
-    hide: false  # show breadcrumbs on root/home page
-    image: false # Show image or title text
 
 strict_front_matter: true
 
@@ -41,11 +44,25 @@ optional_front_matter:
 # Set this to false if you want .md files to be accessible also
   remove_originals: true
 
+svg:
+  optimize: true
+
 exclude:
   - Makefile
   - README.md
+  - layout.md
   - LICENSES/
-  - apache/
-  - configs/
   - docker/
   - _news-items/9999-12-31-template.md
+  - node_modules/
+  - vendor/
+  - package-lock.json
+  - package.json
+  - postcss.config.js
+  - "**/*.license"
+  - .bundle/
+  - .github/
+  - .git/
+  - .gitignore
+  - .reuse/
+  - colours.html

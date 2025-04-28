@@ -2,93 +2,98 @@
 # Copyright 2020 seL4 Project a Series of LF Projects, LLC.
 # SPDX-License-Identifier: CC-BY-SA-4.0
 title: The seL4 Foundation
-redirect_from: /Foundation/home.pml
+redirect_from:
+- /Foundation/home.pml
+- /Foundation/Governance/index.html
+layout: card
+sub: '
+<p>
+  The seL4 Foundation is an open, transparent and neutral organisation tasked
+  with growing the seL4 ecosystem. Its focus is on coordinating, directing and
+  standardising development of the seL4 ecosystem in order to reduce barriers to
+  adoption, raise funds for accelerating development, and ensure clarity of
+  verification claims.
+</p>
+<img class="h-52 w-52 mx-auto" src="../images/sel4-foundation-logo.svg" alt="seL4 Foundation">
+<div class="flex justify-center items-center">
+  <a href="Join" class="button-outline px-10">Become a Member</a>
+</div>'
 ---
-<h1>
-  The seL4 Foundation
-</h1>
-<div>
-  <p>
-    We have taken an exciting step to expand the seL4
-    community, by setting up the <strong>seL4 Foundation</strong>,
-    similar to foundations for other open-source projects, such as
-    the Linux Foundation's Cloud Native Computing Foundation,
-    RISC-V and others. It forms an open, transparent and
-    neutral organisation tasked with growing the seL4 ecosystem. It
-    brings together developers of the seL4 kernel, developers
-    of seL4-based components and frameworks, and those
-    adopting seL4 in real-world systems. Its focus is on
-    coordinating, directing and standardising development of the
-    seL4 ecosystem in order to reduce barriers to adoption, raising
-    funds for accelerating development, and ensuring clarity of
-    verification claims.
-  </p>
-  <p>
-    <span class=join> JOIN NOW
-      <a title="Join" href="Join">HERE!</a></span>
-  </p>
 
-  <a href="../images/mosaic-high.jpg">
-    <img src="../images/mosaic.jpg" style="width:300px; padding-left:10px; float:right;"
-      alt="seL4 foundation launch"
-	   /></a>
-  <p>
-  To learn more about the seL4 Foundation:
-  </p>
-  <ul>
-    <li><strong>Read the <a href="https://microkerneldude.wordpress.com/2020/04/07/the-sel4-foundation-what-and-why/">Blog post</a> about "The seL4 Foundation &mdash; What and Why"</strong>
-    </li>
-    <li><strong>Read the <a href="https://www.linuxfoundation.org/press/press-release/sel4-microkernel-optimized-for-security-gets-support-of-linux-foundation">press releases about the launch from the Linux Foundation</a></strong>
-    </li>
-  </ul>
 
-  <p>
-    For details, please see:
-  </p>
-  <ul>
-    <li>
-      <a title="seL4 Foundation Governance"
-          href="Governance/">seL4 Foundation Governance</a>
-    </li>
-    <li>
-      <a title="seL4 Foundation Governing Board"
-          href="Board/">seL4 Foundation Governing Board</a>
-    </li>
-    <li>
-      <a title="seL4 Technical Steering Committee"
-          href="TSC/">seL4 Technical Steering Committee</a>
-    </li>
-    <li>
-      <a title="Membership"
-          href="Membership">seL4 Foundation Membership</a>
-    </li>
-    <li>
-      <a title="Commercial Support"
-          href="Services/">Commercial Support</a>
-    </li>
-    <li>
-      <a title="seL4 Summit"
-          href="Summit/2024">The seL4 Summit</a>
-    </li>
-    <li>
-      <a title="Supporting next big steps for the seL4 project"
-          href="Support/">Supporting next big steps for the seL4 project</a>
-    </li>
-    <li>
-      <a title="Logo"
-          href="Trademark/logo.html">seL4 Logo</a>
-    </li>
-    <li>
-      <a title="Trademark"
-          href="Trademark/">seL4 Trademark</a>
-    </li>
-    <li>
-      <a title="Contact the Foundation"
-          href="Contact">Contact the seL4 Foundation</a>
-    </li>
-    <li>
-      <a title="Jobs in the seL4 ecosystem"
-          href="Jobs">Jobs in the seL4 ecosystem</a>
-    </li>
-  </ul>
+<div class="section-borders -mt-12 pt-0">
+  <h2 class="text-center mt-16 text-3xl font-bold tracking-tight text-dark md:text-4xl">Two main bodies</h2>
+
+  <!-- Main bodies section -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-12 md:gap-10 py-12 sm:py-20 mx-2 lg:mx-32">
+    {% include card.html
+        icon="user-group"
+        title="Governing Board"
+        body="The body in charge of outreach, managing the funds, protecting the
+              brand. It is governed by the seL4 Foundation Fund Charter."
+        link="Board/"
+    %}
+
+    {% include card.html
+        icon="users"
+        title="TSC"
+        body="The Technical Steering Committee, responsible for overseeing all
+              technical aspects of the seL4 project. It is governed by
+              the seL4 Foundation Technical Charter."
+        link="TSC/"
+    %}
+  </div>
 </div>
+
+<!-- Principles section -->
+<div class="mx-auto mt-32 max-w-4xl px-6 sm:mt-6 lg:px-8 mb-12 sm:mb-24">
+  <div class="mx-auto lg:mx-0">
+    <h2 class="text-3xl font-bold tracking-tight text-dark sm:text-4xl">Key principles</h2>
+    <p class="mt-6 text-lg leading-8 text-light">
+      The seL4 Foundation is established as a project
+      under <a href="https://www.linuxfoundation.org">the Linux
+        Foundation</a>. It is designed to fulfill the following key principles.
+    </p>
+  </div>
+  <dl
+    class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+    <div class="sm:col-span-2">
+      <dt class="font-semibold text-dark">
+        Neutral and community-based
+      </dt>
+      <dd class="mt-1 text-light">
+        The seL4 Foundation provides long-term, independent support for the seL4
+        kernel and the seL4 ecosystem, by enabling the collaborative
+        community-based development, availability and adoption of the seL4
+        kernel. The seL4 Foundation aims to represent the perspectives of all
+        main actors in the seL4 community (kernel developers, kernel verifiers,
+        ecosystem developers and adopters), in the technical and general
+        governance of the seL4 kernel and the&nbsp;seL4 Foundation.
+      </dd>
+    </div>
+    <div>
+      <dt class="font-semibold text-dark">
+        Adoption growth
+      </dt>
+      <dd class="mt-1 text-light">
+        The seL4 Foundation enables and promotes adoption of seL4 by supporting
+        the evolution and verification of the seL4 kernel, and by supporting the
+        growth of the seL4 ecosystem, which is required to facilitate
+        development of seL4-based systems.
+      </dd>
+    </div>
+    <div>
+      <dt class="font-semibold text-dark">
+        Brand promotion and protection
+      </dt>
+      <dd class="mt-1 text-light">
+        The seL4 Foundation provides official releases of the seL4 kernel
+        with clear associated verification statements, to promote the use of
+        seL4 as a competitive advantage, with clear traceability to the sources
+        of the code and the proofs.
+      </dd>
+    </div>
+  </dl>
+</div>
+
+{% include logo-cloud.html %}

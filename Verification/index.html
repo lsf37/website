@@ -1,0 +1,65 @@
+---
+# Copyright 2020 seL4 Project a Series of LF Projects, LLC.
+# SPDX-License-Identifier: CC-BY-SA-4.0
+redirect_from: /About/FAQ/proof.html
+title: Verification
+layout: card
+no_title_heading: true
+---
+
+{% capture sub %}
+<p>
+   seL4 is the most highly-assured operating system kernel. Its uniqueness
+   lies in the formal mathematical proof that it behaves precisely as
+   specified and enforces strong security boundaries for applications. This
+   makes seL4 the trustworthy foundation of choice for safely running critical
+   applications alongside untrusted workloads.
+ </p>
+{% endcapture %}
+
+{% include heading.html
+   h1="Verification"
+   sub=sub
+%}
+
+<div class="card-grid-2">
+  {% include card.html
+     icon="check"
+     title="The seL4 Proofs"
+     body="Machine-checked mathematical proofs from
+           high-level specifications to binary code, for strong
+           properties ranging from functional correctness to absence of
+           information leakage."
+     link="proofs.html"
+  %}
+
+  {% include card.html
+      icon="sparkles"
+      title="Proof Implications"
+      body="Functional correctness is an extremely strong property. So strong
+            that it implies, for free, the absence of whole classes of common
+            programming errors such as buffer overflows, memory leaks, and other
+            bugs that usually plague C programs."
+      link="implications.html"
+  %}
+
+  {% include card.html
+      icon="magnifying-glass"
+      title="Assumptions"
+      body="What the seL4 proofs assume: assembly code, boot code, machine
+            interface, hardware, and DMA. This is where manual validation and
+            scrutiny can focus on."
+      link="assumptions.html"
+   %}
+
+
+  {% include card.html
+     icon="check-badge"
+     title="Proofs and Certification"
+     body="The traditional way to achieve high levels of assurance are schemes
+           such as Common Criteria, ISO-26262, and DO-178C. The seL4 proofs go
+           beyond what these certification schemes require for software
+           development at their most stringent levels."
+     link="certification.html"
+  %}
+</div>

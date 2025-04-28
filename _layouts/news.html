@@ -1,59 +1,72 @@
 ---
 # Copyright 2023 seL4 Project a Series of LF Projects, LLC.
 # SPDX-License-Identifier: CC-BY-SA-4.0
-layout: default
+layout: base
 ---
 
 {%- assign this_year = page.year | append: "" -%}
+{% capture sub %}
+<p>News about seL4, the seL4 Foundation, and the seL4 ecosystem.</p>
+<p>Also available as <a type="application/atom+xml" href="{{ '/feed.xml' | relative_url }}">RSS</a> feed.</p>
+<nav class="mt-4">
+  {%- assign newest_url = site.pages | where: "layout", "news" | map: "name" | sort | pop | last -%}
+  {%- assign newest_year = newest_url | split: "." | first -%}
+  {%- assign url = "/news/" | relative_url %}
+      News from {%- if newest_year == this_year %} older {%- else %} other {%- endif %} years:
+  {%- for i in (2020..newest_year) -%}
+  {%-   unless i == page.year %}
+        <a href="{{ url }}{{ i }}.html">{{ i }}</a>
+  {%- else %}
+       <span class="text-lighter">{{ i }}</span>
+  {%- endunless -%}
+  {%- endfor %}
+</nav>
+{% endcapture %}
 
-{%- assign newest_url = site.pages | where: "layout", "news" | map: "name" | sort | pop | last -%}
-{%- assign newest_year = newest_url | split: "." | first -%}
-<div class="row" style="margin-left: 0.3em;">
-  <div class="col">
-    <h1>
-      News about
-      <a href="{{ '/' | relative_url }}">seL4</a>
-      and the
-      <a href="{{ '/Foundation' | relative_url }}">seL4 Foundation</a>
-      {%- unless newest_year == this_year %} &mdash; {{ page.year }} {%- endunless %}
-    </h1>
-  </div>
-  <div class="col">
-{%- assign url = "/news/" | relative_url %}
-    News from {%- if newest_year == this_year %} older {%- else %} other {%- endif %} years:
-{%- for i in (2020..newest_year) -%}
-{%-   unless i == page.year %}
-      <a href="{{ url }}{{ i }}">{{ i }}</a>
-{%- else %}
-     {{ i }}
-{%- endunless -%}
-{%- endfor %}
-  </div>
-</div>
+{% include heading.html
+   h1=page.title
+   sub=sub
+%}
 
 {%  for news_item in site.news-items reversed -%}
 {%-   assign date = news_item.date | date: "%d %b %Y" -%}
+{%-   assign iso = news_item.date | date: "%Y-%m-%d" -%}
 {%-   assign year = date | date: "%Y" -%}
 {%-   assign default_anchor = news_item.date | date: "%m-%d" -%}
 {%-   assign anchor = news_item.anchor | default: default_anchor -%}
 {%-   if year == this_year -%}
-<div class="news-item tag-link" id="{{ anchor }}">
-  <a href="#{{ anchor }}"><span class="tag-span"># </span></a>
-  {{ date }}: {{ news_item.title }}
-</div>
-<div>
-{%    if news_item.img -%}
-{%-     if news_item.link -%}
-  <a href="{{ news_item.link }}">
-{%-     endif -%}
-    <img src="{{ news_item.img | relative_url }}" style="width:{{ news_item.width | default: '20%' }};" class="news-img" alt="{{ news_item.alt | default: news_item.title }}">
-{%-     if news_item.link -%}
+
+{%-   assign img_layout = "float-right rounded-xl -mt-1 ml-4 sm:ml-6 lg:-mr-16" -%}
+{%-   assign w = news_item.img_w | default: "w-2/5" -%}
+{%-   if news_item.dark -%}
+{%-     assign bg = "" -%}
+{%-   else -%}
+{%-     assign bg = "bg-white" -%}
+{%-   endif -%}
+{%-   assign default_img_class = bg | append: " p-6 sm:p-8 " | append: w-%}
+{%-   assign c = news_item.img_class | default: default_img_class -%}
+
+<article class="max-w-4xl mx-auto mb-12 sm:mb-18 pt-2 pb-8 px-6 lg:px-8 clear-both">
+  <a href="#{{anchor}}" class="text-base sm:text-lg hover:underline text-gray-400 pt-16 lg:pt-20">
+    <time datetime="{{ iso }}" id="{{anchor}}">{{ date }}</time>
   </a>
-{%-     endif -%}
-{%-   endif %}
-{{ news_item.content }}
-</div>
-<div class="news-finish"></div>
+  <h2 class="mb-8 mt-2 h2-size">{{ news_item.title }}</h2>
+  <div class="theprose prose-ul:[ul]:my-2 prose-p:[p]:my-3 prose-li:[li]:my-1.5 max-w-4xl">
+    {% if news_item.img -%}
+    {%- if news_item.link -%}
+    <a href="{{ news_item.link | relative_url }}">
+      {%- endif -%}
+      <img src="{{ news_item.img | relative_url }}" alt="{{ news_item.alt | default: news_item.title }}"
+        class="{{img_layout}} {{c}}">
+      {%- if news_item.link -%}
+    </a>
+    {%- endif -%}
+    {%- endif %}
+    {{ news_item.content }}
+  </div>
+</article>
+
+{% include centered-up-button.html margins="mb-12 md:mb-24" %}
 
 {%   endif -%}
 {%- endfor -%}

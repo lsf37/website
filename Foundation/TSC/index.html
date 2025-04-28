@@ -1,172 +1,199 @@
 ---
 # Copyright 2020 seL4 Project a Series of LF Projects, LLC.
 # SPDX-License-Identifier: CC-BY-SA-4.0
-title: seL4 TSC
+title: Technical Steering Committee
+pre: "The seL4 Foundation"
+pre_link: "../"
+sub: '
+<p>
+ The Technical Steering Committee (TSC) of the seL4 Foundation is
+ responsible for overseeing all technical aspects of the seL4 project:
+ technical direction, code of conduct, procedures, workflows, quality
+ control, etc. <a href="#meetings">Meeting minutes</a> are public.
+ New members can <a href="#join">join</a> by TSC decision.
+</p>'
+layout: card
 redirect_from: /Foundation/TSC/home.pml
 ---
-<h1>Technical Steering Committee</h1>
 
-  <p>The Technical Steering Committee (TSC) of the seL4 Foundation is
-  responsible for overseeing all technical aspects of the seL4 project
-  (technical direction, code of conduct, procedures, workflows,
-  quality control, etc). It is made up of seL4 developers, proof engineers,
-  and technical leaders.
-  Their role is described in detail in the
-    <a title="seL4 Foundation Technical Charter"
-       href="../Governance/seL4_Foundation_Technical_Charter.pdf">seL4
-      Foundation Technical Charter</a>.
-  </p>
+{% include section-start.html
+    heading='Members'
+    id='members'
+    margins='pt-16 sm:pt-24'
+    body-max-w='max-w-6xl'
+    intro='
+    <p>
+      The TSC is made up of seL4 developers, proof engineers, and technical
+      leaders. The role of the TSC is described in detail in the
+      <a title="seL4 Foundation Technical Charter"
+          href="seL4_Foundation_Technical_Charter.pdf">seL4
+        Foundation Technical Charter</a>.
+    </p>'
+%}
+
+  {% include person-grid-start.html dense=true %}
+    {% include person.html
+      name = "June Andronick"
+      text = "Proofcraft"
+      img = "/Foundation/Board/TS-June-square.jpg"
+      link = "https://proofcraft.systems/#june"
+    %}
+    {% include person.html
+      name = "Matthew Brecknell"
+      text = "Kry10"
+      img = "/images/tsc/matthew-square.jpg"
+      link = "https://www.linkedin.com/in/mbrcknl"
+    %}
+    {% include person.html
+      name = "Kevin Elphinstone"
+      text = "UNSW"
+      img = "/images/tsc/kevin-square.jpg"
+      link = "https://trustworthy.systems/people/?cn=Kevin+Elphinstone"
+    %}
+    {% include person.html
+      name = "Gernot Heiser"
+      text = "UNSW"
+      img = "/Foundation/Board/TS-Gernot-square.jpg"
+      link = "https://trustworthy.systems/people/?cn=Gernot+Heiser"
+    %}
+    {% include person.html
+      name = "Gerwin Klein (Chair)"
+      text = "Proofcraft"
+      img = "/Foundation/Board/TS-Gerwin-square.jpg"
+      link = "https://doclsf.de"
+    %}
+    {% include person.html
+      name = "Rafal Kolanski"
+      text = "Proofcraft"
+      img = "/images/tsc/rafal-square.jpg"
+      link = "https://trustworthy.systems/people/?cn=Rafal+Kolanski"
+    %}
+    {% include person.html
+      name = "Ihor Kuz"
+      text = "Kry10"
+      img = "/images/tsc/ihor-square.jpg"
+      link = "https://trustworthy.systems/people/?cn=Ihor+Kuz"
+    %}
+    {% include person.html
+      name = "Corey Lewis"
+      text = "Proofcraft"
+      img = "/images/tsc/corey-square.jpg"
+      link = "https://trustworthy.systems/people/?cn=Corey+Lewis"
+    %}
+    {% include person.html
+      name = "Anna Lyons"
+      text = ""
+      img = "/images/tsc/anna.png"
+      link = "https://www.linkedin.com/in/annamlyons/"
+    %}
+    {% include person.html
+      name = "Kent McLeod"
+      text = "Kry10"
+      img = "/images/tsc/kent-square.jpg"
+      link = "https://trustworthy.systems/people/?cn=Kent+Mcleod"
+    %}
+    {% include person.html
+      name = "Yanyan Shen"
+      text = "NIO"
+      img = "/images/tsc/yanyan-square.jpg"
+      link = "https://au.linkedin.com/in/yanyan-shen-1495547"
+    %}
+  {% include person-grid-end.html %}
+
+{% include section-end.html %}
 
 
-<h3>Members</h3>
+{% include section-start.html
+    heading='Meetings'
+    id='meetings'
+    intro='
+    <p>
+      TSC meetings are public, with minutes made publicly available from this
+      page.
+      If you have an issue that you would like to bring to the attention of the TSC,
+      please email any of its members listed above.
+    </p>
+    <p>
+      The following meetings and decisions have been recorded so far:
+    </p>'
+%}
 
-<div class="people_grid">
+<ul class="mt-6 space-y-2">
+{% include tsc-notes-li.html date="2024-07-25" n=8 %}
+{% include tsc-notes-li.html date="2024-03-22" n=7 %}
+{% include tsc-notes-li.html date="2023-09-12" n=6 %}
+{% include tsc-notes-li.html date="2023-07-17"
+    vote="to invite Indan Zupancic and Ivan Velickovic as
+          Committers, as well as Alwin Joshy as Reviewer."
+%}
+{% include tsc-notes-li.html date="2023-05-30"
+  vote="to drop support for Cogent."
+%}
+{% include tsc-notes-li.html date="2022-12-16" n=5 %}
+{% include tsc-notes-li.html date="2022-12-15"
+    vote="to invite Indan Zupancic as Reviewer."
+%}
+{% include tsc-notes-li.html date="2022-04-14"
+  vote=
+  "to approve <a href='https://sel4.github.io/rfcs/implemented/0100-refactor-aarch64-vspace.html'>RFC-10</a>."
+%}
+{% include tsc-notes-li.html date="2021-12-17" n=4 %}
+{% include tsc-notes-li.html date="2021-12-16"
+    vote="to invite Yanyan Shen to the TSC."
+%}
+{% include tsc-notes-li.html date="2021-09-30"
+    vote=
+    "to approve <a href='https://sel4.github.io/rfcs/implemented/0080-remove-armv6-support.html'>RFC-8</a>."
+%}
+{% include tsc-notes-li.html date="2021-09-29"
+  vote="for interim endorsement."
+%}
+{% include tsc-notes-li.html date="2021-08-18"
+    vote="for interim endorsement."
+%}
+{% include tsc-notes-li.html date="2021-05-27"
+    vote="for invitation to committer role."
+%}
+{% include tsc-notes-li.html date="2021-02-12" n=3 %}
+{% include tsc-notes-li.html date="2021-01-29" n=2 %}
+{% include tsc-notes-li.html date="2020-05-21"
+  vote="for invitation to reviewer role."
+%}
+{% include tsc-notes-li.html date="2020-05-20" n=1 last=true %}
 
-  <div class="person">
-    <div class="person_pic">
-      <a href="https://au.linkedin.com/in/yanyan-shen-1495547"><img src="../../images/tsc/yanyan.jpg" alt="Yanyan Shen" width="80" /></a>
-    </div>
-    <div class="person_title">
-      <strong><a class="list_link" href="https://au.linkedin.com/in/yanyan-shen-1495547">Yanyan Shen</a></strong>
-    </div>
-  </div>
-
-  <div class="person">
-    <div class="person_pic">
-      <a href="https://www.linkedin.com/in/mbrcknl"><img src="../../images/tsc/matthew.jpg" alt="Matthew Brecknell" width="80" /></a>
-    </div>
-    <div class="person_title">
-      <strong><a class="list_link" href="https://www.linkedin.com/in/mbrcknl">Matthew Brecknell</a></strong>
-    </div>
-  </div>
-
-  <div class="person">
-    <div class="person_pic">
-      <a href="https://trustworthy.systems/people/?cn=Ihor+Kuz"><img src="../../images/tsc/ihor.jpg" alt="Ihor Kuz" width="80" /></a>
-    </div>
-    <div class="person_title">
-      <strong><a class="list_link" href="https://trustworthy.systems/people/?cn=Ihor+Kuz">Ihor Kuz</a></strong>
-    </div>
-  </div>
-
-  <div class="person">
-    <div class="person_pic">
-      <a href="https://trustworthy.systems/people/?cn=Gerwin+Klein"><img src="../Board/TS-Gerwin-s.jpg" alt="Gerwin Klein" width="80" /></a>
-    </div>
-    <div class="person_title">
-      <strong><a class="list_link" href="https://trustworthy.systems/people/?cn=Gerwin+Klein">Gerwin Klein</a> (chair)</strong>
-    </div>
-  </div>
-
-  <div class="person">
-    <div class="person_pic">
-      <a href="https://trustworthy.systems/people/?cn=Rafal+Kolanski"><img src="../../images/tsc/rafal.jpg" alt="Rafal Kolanski" width="80" /></a>
-    </div>
-    <div class="person_title">
-      <strong><a class="list_link" href="https://trustworthy.systems/people/?cn=Rafal+Kolanski">Rafal Kolanski</a></strong>
-    </div>
-  </div>
-
-  <div class="person">
-    <div class="person_pic">
-      <a href="https://trustworthy.systems/people/?alumni=True"><img src="../../images/tsc/corey.jpg" alt="Corey Lewis" width="80" /></a>
-    </div>
-    <div class="person_title">
-      <strong><a class="list_link" href="https://trustworthy.systems/people/?alumni=True">Corey Lewis</a></strong>
-    </div>
-  </div>
-
-  <div class="person">
-    <div class="person_pic">
-      <a href="https://www.linkedin.com/in/annamlyons/"><img src="../../images/tsc/anna.png" alt="Anna Lyons" width="80" /></a>
-    </div>
-    <div class="person_title">
-      <strong><a class="list_link" href="https://www.linkedin.com/in/annamlyons/">Anna Lyons</a></strong>
-    </div>
-  </div>
-
-  <div class="person">
-    <div class="person_pic">
-      <a href="https://trustworthy.systems/people/?alumni=True"><img src="../../images/tsc/kent.jpg" alt="Kent Mcleod" width="80" /></a>
-    </div>
-    <div class="person_title">
-      <strong><a class="list_link" href="https://trustworthy.systems/people/?alumni=True">Kent Mcleod</a></strong>
-    </div>
-  </div>
-
-  <div class="person">
-    <div class="person_pic">
-      <a href="https://trustworthy.systems/people/?cn=June+Andronick"><img src="../Board/TS-June-s.jpg" alt="June Andronick" width="80" /></a>
-    </div>
-    <div class="person_title">
-      <strong><a class="list_link" href="https://trustworthy.systems/people/?cn=June+Andronick">June Andronick</a></strong>
-    </div>
-  </div>
-
-  <div class="person">
-    <div class="person_pic">
-      <a href="https://trustworthy.systems/people/?cn=Kevin+Elphinstone"><img src="../../images/tsc/kevin.jpg" alt="Kevin Elphinstone" width="80"/></a>
-    </div>
-    <div class="person_title">
-      <strong><a class="list_link" href="https://trustworthy.systems/people/?cn=Kevin+Elphinstone">Kevin Elphinstone</a></strong>
-    </div>
-  </div>
-
-  <div class="person">
-    <div class="person_pic">
-      <a href="https://trustworthy.systems/people/?cn=Gernot+Heiser"><img src="../Board/TS-Gernot-s.jpg" alt="Gernot Heiser" width="80"/></a>
-    </div>
-    <div class="person_title">
-      <strong><a class="list_link" href="https://trustworthy.systems/people/?cn=Gernot+Heiser">Gernot Heiser</a></strong>
-    </div>
-  </div>
-
-</div>
-
-<h3>Meetings</h3>
-<p>
-After the constituting meeting, TSC meetings are planned to be public, and minutes will be
-made publicly available from this page.</p>
-<p>
-If you have an issue that you'd like to bring to the attention of the TSC,
-please email any of its members listed above.</p>
-<p>
-The following meetings and decisions have so far been recorded:</p>
-<ul>
-  <li>2020-05-20: <a href="notes/tsc-meeting-2020-05-20.pdf">Constituting meeting of
-      the TSC</a></li>
-  <li>2020-05-21: <a href="notes/vote-2020-05-21.pdf">Email vote</a> for invitation
-      to reviewer role.</li>
-  <li>2021-01-29: <a href="notes/tsc-meeting-2021-01-29.pdf">2nd TSC meeting</a></li>
-  <li>2021-02-12: <a href="notes/tsc-meeting-2021-02-12.pdf">3rd TSC meeting</a></li>
-  <li>2021-05-27: <a href="notes/vote-2021-05-27.pdf">Email vote</a> for invitation
-      to committer role.</li>
-  <li>2021-08-18: <a href="notes/vote-2021-08-18.pdf">Email vote</a> for interim endorsement.</li>
-  <li>2021-09-29: <a href="notes/vote-2021-09-29.pdf">Email vote</a> for interim endorsement.</li>
-  <li>2021-09-30: <a href="notes/vote-2021-09-30.pdf">Email vote</a> to approve <a href="https://sel4.github.io/rfcs/implemented/0080-remove-armv6-support.html">RFC-8</a>.</li>
-  <li>2021-12-16: <a href="notes/vote-2021-12-16.pdf">Email vote</a> to invite Yanyan Shen to the TSC.</li>
-  <li>2021-12-17: <a href="notes/tsc-meeting-2021-12-17.pdf">4th TSC meeting</a>.</li>
-  <li>2022-04-14: <a href="notes/vote-2022-04-14.pdf">Email vote</a> to approve <a href="https://sel4.github.io/rfcs/implemented/0100-refactor-aarch64-vspace.html">RFC-10</a>.</li>
-  <li>2022-12-15: <a href="notes/vote-2022-12-15.pdf">Email vote</a> to invite Indan Zupancic as Reviewer.</li>
-  <li>2022-12-16: <a href="notes/tsc-meeting-2022-12-16.pdf">5th TSC meeting</a>.</li>
-  <li>2023-05-30: <a href="notes/vote-2023-05-30.pdf">Email vote</a> to drop support for Cogent.</li>
-  <li>2023-07-17: <a href="notes/vote-2023-07-17.pdf">Email vote</a> to invite Indan Zupancic and Ivan Velickovic as Committers, as well as Alwin Joshy as Reviewer.</li>
-  <li>2023-09-12: <a href="notes/tsc-meeting-2023-09-12.pdf">6th TSC meeting</a>.</li>
-  <li>2024-03-22: <a href="notes/tsc-meeting-2024-03-22.pdf">7th TSC meeting</a>.</li>
-  <li>2024-07-25: <a href="notes/tsc-meeting-2024-07-25.pdf">8th TSC meeting</a>.</li>
 </ul>
 
-<h3>Joining the TSC</h3>
-<p>
-TSC members are the technical leadership of the foundation. New members can
-join the TSC by decision (vote) of the TSC, and potential new members can be nominated
-by any current TSC member.
-</p>
-<p>
-New members are generally expected to be active current contributors with the technical
- knowledge required for the role and a vision for the future of the seL4 ecosystem.</p>
-<p>
-There are separate roles for repository write access (Committer), organisational admin
-access (SysAdmin), and the ability to approve pull request and manage issues (Reviewer).
-</p>
-<p>If you would like to nominate someone for any of these roles, please email the chair (Gerwin Klein) of the TSC.</p>
+{% include section-end.html %}
+
+{% include section-start.html
+    heading='Joining the TSC'
+    id='join'
+    intro='
+    <p>
+      TSC members are the technical leadership of the seL4 Foundation. New members
+      can join the TSC by decision (vote) of the TSC, and potential new
+      members can be nominated by any current TSC member.
+    </p>'
+%}
+
+<ul class="mt-10 max-w-xl space-y-8 text-light">
+  {% include green-tick-li.html
+      text="
+      New members are generally expected to be active current contributors
+      with the technical knowledge required for the role and a vision for
+      the future of the seL4 ecosystem."
+  %}
+  {% include green-tick-li.html
+      text="
+      There are separate roles for repository write access (Committer),
+      organisational admin access (SysAdmin), and the ability to approve pull
+      requests and manage issues (Reviewer)."
+  %}
+  {% include green-tick-li.html
+    text="
+    If you would like to nominate someone for any of these roles,
+      please email the chair (Gerwin Klein) of the TSC."
+  %}
+</ul>
+
+{% include section-end.html %}

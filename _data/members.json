@@ -1,0 +1,121 @@
+{
+  "premium": [
+    {
+      "name": "Jump Trading",
+      "logo": "Jump-Trading.svg",
+      "url": "https://jumptrading.com/"
+    },
+    {
+      "name": "NIO",
+      "logo": "NIO.svg",
+      "url": "http://nio.com/"
+    },
+    {
+      "name": "UNSW Sydney",
+      "logo": "UNSW.svg",
+      "url": "https://unsw.edu.au/",
+      "founding": true,
+      "endorsed": true
+    }
+  ],
+  "general": [
+    {
+      "name": "Apple",
+      "logo": "apple.svg",
+      "url": "https://apple.com/"
+    },
+    {
+      "name": "Cog Systems Inc",
+      "logo": "Cog.jpg",
+      "url": "https://cog.systems/",
+      "founding": true,
+      "endorsed": true
+    },
+    {
+      "name": "DornerWorks Ltd",
+      "logo": "DornerWorks.svg",
+      "url": "https://www.dornerworks.com",
+      "founding": true,
+      "endorsed": true
+    },
+    {
+      "name": "Kry10 Limited",
+      "logo": "Kry10.svg",
+      "url": "https://www.kry10.com/",
+      "endorsed": true
+    },
+    {
+      "name": "MEP",
+      "logo": "mep.svg",
+      "url": "https://www.mep-info.com/"
+    },
+    {
+      "name": "Penten Pty Ltd",
+      "logo": "Penten.svg",
+      "url": "https://www.penten.com/"
+    },
+    {
+      "name": "Proofcraft",
+      "logo": "proofcraft.svg",
+      "url": "https://proofcraft.systems/",
+      "endorsed": true
+    },
+    {
+      "name": "Raytheon Technologies",
+      "logo": "raytheontechnologies.svg",
+      "url": "https://www.rtx.com/"
+    }
+  ],
+  "associate": [
+    {
+      "name": "Autoware Foundation",
+      "logo": "autoware.svg",
+      "url": "https://autoware.org/"
+    },
+    {
+      "name": "Cyberagentur",
+      "logo": "Cyberagentur.svg",
+      "url": "https://www.cyberagentur.de/"
+    },
+    {
+      "name": "ETH Zurich",
+      "logo": "ETH-Zurich.svg",
+      "url": "https://ethz.ch/en.html"
+    },
+    {
+      "name": "Kansas State University",
+      "logo": "kansas-state.svg",
+      "url": "https://www.k-state.edu/"
+    },
+    {
+      "name": "Lewis & Clark College",
+      "logo": "lewis-clark.svg",
+      "url": "https://www.lclark.edu/"
+    },
+    {
+      "name": "NCSC",
+      "logo": "NCSC.png",
+      "url": "https://www.ncsc.gov.uk/"
+    },
+    {
+      "name": "RISC-V International",
+      "logo": "RISC-V.svg",
+      "url": "https://riscv.org/"
+    },
+    {
+      "name": "Technology Innovation Institute",
+      "logo": "TII.jpg",
+      "url": "https://www.tii.ae/"
+    },
+      {
+      "name": "TU Munich",
+      "logo": "TU-Munich.svg",
+      "url": "https://www.tum.de/en"
+    },
+    {
+      "name": "University of Kansas",
+      "logo": "ku-institute.svg",
+      "url": "https://ku.edu/"
+    }
+  ]
+}

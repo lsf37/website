@@ -1,0 +1,229 @@
+---
+# Copyright 2020 seL4 Project a Series of LF Projects, LLC.
+# SPDX-License-Identifier: CC-BY-SA-4.0
+layout: card
+title: seL4 in use
+no_title_heading: true
+page_class: "max-w-full sm:overflow-x-hidden 2xl:max-w-7xl 2xl:overflow-x-visible"
+redirect_from: /Use/index.html
+---
+
+<div class="mx-auto max-w-5xl gap-x-14 lg:mx-0 lg:flex lg:max-w-full lg:items-center">
+  <div class="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
+    <h1 class="text-4xl font-bold tracking-tight text-dark sm:text-6xl">
+      seL4 is used across a wide range of sectors
+    </h1>
+    <div class="text-light text-lg leading-8">
+      <p class="mt-6">
+        seL4's formally verified isolation enforcement enables unique solutions
+        for safely running critical applications alongside uncritical
+        workloads. This capability has a significant impact across critical
+        sectors such as automotive, aerospace, infrastructure, defence, secure
+        communications, and more.
+      </p>
+      <p class="mt-6">
+        Here are some examples of where seL4 is being used. There are many more &mdash;
+        while seL4 is open source, many products or developments on it are not or cannot
+        be public.</p>
+      <p class="mt-6 sm:max-w-md lg:max-w-none">
+        If you would like to be added to this list, please contact us at
+        <a title="foundation@sel4.systems" href="mailto:foundation@sel4.systems">foundation@sel4.systems</a>. See
+        also our list of <a href="Research/ongoing.html">research
+          organisations</a> conducting seL4-related research and the list
+        of <a href="tools.html">frameworks and languages</a> built on or for
+        seL4.
+      </p>
+    </div>
+  </div>
+
+  <div class="mt-14 flex justify-end gap-8 sm:-mt-74 sm:justify-start sm:pl-70 lg:mt-0 lg:pl-0">
+    <div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+      <div class="relative">
+        <img src="images/boeing-ulb-helicopter.jpg"
+	     alt="US Navy 090616-M-9917S-144 The Unmanned Little Bird (ULB)
+	         helicopter, a smaller variant of the larger, manned A-MH-6M can
+	         be controlled by a pilot or piloted remotely"
+             class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+        <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+      </div>
+    </div>
+    <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+      <div class="relative">
+        <img src="images/nio-onvo.png" alt="NIO's ONVO car"
+          class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+        <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+      </div>
+      <div class="relative">
+        <img src="images/windmill.jpg" alt="Windmills with a sunset background"
+          class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+        <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+      </div>
+    </div>
+    <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
+      <div class="relative">
+        <img src="images/spacex.jpg" alt="a satellite over the earth"
+          class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+        <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+      </div>
+      <div class="relative">
+        <img src="images/industrial-control.jpg" alt="industrial control machine at work"
+          class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+        <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-16 space-y-20 lg:mt-20 lg:space-y-20 max-w-4xl mx-auto">
+
+  {% include card-use.html
+  pic="/images/nio-onvo.png"
+  tag="Commercial product"
+  title="seL4 in mass production in NIO's cars"
+  link="Summit/2024/abstracts2024.html#a-software-defined"
+  description='
+  Global smart electric vehicle company <a href="https://www.nio.com">NIO</a>
+  mass-produces the <a href="https://www.nio.com/news/onvo-l60-launch"> ONVO
+  L60</a> vehicle, featuring their seL4-based SkyOS-M operating system. This was
+  <a href="Summit/2024/abstracts2024.html#a-software-defined">announced
+  by Ning Qu</a>, NIO&apos;s VP of engineering and leader of the SkyOS team, at
+  the seL4 summit 2024. NIO is
+  a <a href="Foundation/Membership/index.html">Premium Member</a> of
+  the <a href="Foundation/index.html">seL4 Foundation</a>, with
+  NIO&apos;s Global VP of Digital Systems, Qiyan Wang, sitting
+  on the <a href="Foundation/Board/index.html">seL4 Foundation board</a>.
+  '
+  %}
+
+  {% include card-use.html
+  pic="/images/use-vm-composer.jpg"
+  tag="Commercial product"
+  title="seL4 in DornerWorks' VM Composer"
+  link="https://www.dornerworks.com/vm-composer/"
+  description='
+  Built on seL4 to enable robust security,
+  DornerWorks&apos; <a href="https://www.dornerworks.com/vm-composer/">Secure
+  Microkernel Virtual Machine (VM) Composer</a> is a modelling tool and the "easy
+  button" that helps organisations develop and deploy virtualised high-assurance
+  systems using a drag-and-drop
+  interface. <a href="https://www.dornerworks.com">DornerWorks</a>, a founding
+  <a href="Foundation/Membership/index.html">member</a> of
+  the <a href="Foundation/index.html">seL4 Foundation</a> and one of
+  its <a href="Services/index.html">endorsed service providers</a>,
+  has a dedicated team of seL4 experts who help organisations accelerate the
+  integration of seL4 as the trusted software base for their products.
+  '
+  %}
+
+  {% include card-use.html
+  pic="/images/mep-surevoice.jpg"
+  tag="Commercial product"
+  title="seL4 in MEP's SureVoice Solid VCS"
+  link="https://www.mep-info.com/products/surevoice-solid"
+  description='
+  <a href="https://www.mep-info.com/products/surevoice-solid">SureVoice
+  Solid</a> is running at the heart of the SureVoice Voice Control System (VCS),
+  used by air traffic and maritime controllers to communicate with pilots and
+  captains of ships. <a href="https://www.mep-info.com">MEP</a> is a company
+  developing and supplying voice communication systems for critical applications
+  in the Maritime and Aviation sectors worldwide. MEP has chosen to run
+  SureVoice on seL4 to guarantee 24/7 availability. The seL4 platform provides
+  the separation of functionalities in the SureVoice Solid to ensure safety and
+  secure operation.
+  '
+  %}
+
+  {% include card-use.html
+  pic="/images/industrial-control.jpg"
+  tag="Commercial product"
+  title="seL4 in KOS operating system for mission critical connected devices"
+  link="https://www.kry10.com/#platform"
+  description='
+  <a href="https://www.kry10.com/#platform">KOS</a> is an Operating System and
+  platform designed from the ground up for mission critical connected
+  devices. Developed by <a href="https://www.kry10.com">Kry10</a>, KOS
+  leverages the formal verification of seL4 to provide an operating system that
+  is secure, self-healing, and dynamic with minimal downtime, even during
+  upgrades. Kry10 is an <a href="Foundation/Membership/index.html">seL4
+  Foundation member</a>, with strong seL4 expertise, contributing three
+  members to the <a href="Foundation/TSC/index.html">seL4 Technical Steering
+  Committee</a>, Kent McLeod, Ihor Kuz and Matthew Brecknell.
+  '
+  %}
+
+
+  {% include card-use.html
+  pic="/images/use-neutrality.png"
+  tag="Commercial research &amp; development"
+  title="seL4 in Neutrality's Atoll hypervisor"
+  link="Summit/2024/abstracts2024.html#a-neutrality"
+  description='
+  Swiss start-up <a href="https://neutrality.ch">Neutrality</a> is developing
+  the <a href="Summit/2024/abstracts2024.html#a-neutrality">Atoll
+  hypervisor</a> &mdash; a high-assurance platform designed to protect systems
+  that are likely targets of well-resourced attackers. Atoll will leverage the
+  seL4 microkernel, configured as a multikernel, to provide verified isolation
+  between virtualised workloads running on datacenter-class hardware with
+  hundreds of CPU cores. This approach will deliver orders-of-magnitude
+  increases in hardware performance while retaining the benefits of formal
+  verification.
+  '
+  %}
+
+
+  {% include card-use.html
+  pic="/images/smaccmcopter-defcon.jpg"
+  tag="Tech Demo"
+  title="seL4 protects DARPA drone from DEFCON hackers"
+  description='
+  In 2021, <a href="https://www.darpa.mil">DARPA</a> brought
+  the <em>SMACCMcopter</em>, a research vehicle protected by seL4 as part of
+  the <a href="https://www.darpa.mil/research/programs/high-assurance-cyber-military-systems">HACMS</a>
+  program, to the famous
+  <a href="https://defcon.org/html/defcon-29/dc-29-index.html">DEF CON</a>
+  hacker convention.  DARPA challenged the assembled hacker elite
+  to <a href="http://loonwerks.com/publications/cofer2021defcon.html">"steal
+  this Drone"</a>, confident in seL4&apos;s formally verified security
+  enforcement. As expected, the hackers&apos; efforts to compromise the SMACCMcopter
+  were comprehensively defeated.
+  As <a href="https://twitter.com/DARPA/status/1424752441900339200">DARPA
+    said</a>: "Formal methods FTW!"
+  '
+  %}
+
+
+  {% include card-use.html
+  pic="/images/boeing-ulb-helicopter.jpg"
+  tag="Tech Demo"
+  title="seL4 protects unmanned helicopter against cyber attacks"
+  link="http://loonwerks.com/projects/hacms.html"
+  description='
+  In the
+  DARPA-funded <a href="https://www.darpa.mil/research/programs/high-assurance-cyber-military-systems">HACMS</a>
+  program, seL4 was embedded in a range of autonomous vehicles, ranging from
+  trucks, a land robot, and a quadcopter to Boeing&apos;s Unmanned Little Bird
+  helicopter. At
+  the <a href="https://www.youtube.com/watch?v=WAOUbAAGRZs">end-of-project
+  demonstration</a>, the HACMS Red Team — a professional team of hackers — was
+  unsuccessful at compromising the security of the helicopter, in flight: they
+  were given full access to the uncritical camera feed, and were even given the
+  keys to crash its virtual machine, but seL4 prevented the cyber attack from
+  compromising the flight mission.
+  '
+  %}
+
+</div>
+
+<h2 class="pt-20 lg:pt-24 pb-5 text-center h3-size sm:h2-size text-dark a-underline">
+  More use cases of seL4 are presented each year at the <a href="Summit/">seL4 summit</a>.
+</h2>
+<h3 class="pb-10 md:pb-16 xl:pb-20 text-center h4-size sm:h3-size text-dark a-underline">
+  Presenters, panelists and sponsors of the seL4 summits include
+</h3>
+
+<img src="{{ '/images/wordcloud-summit-participants-sponsors.svg' | relative_url }}"
+     width="330" height="290"
+     alt="Word cloud of seL4 summit participants and sponsors"
+     class="mx-auto w-4/5 md:w-2/3 lg:w-1/2 aspect-33/29" >
+
+{% include centered-up-button.html margins="my-12 pb-12" %}

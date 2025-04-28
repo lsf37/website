@@ -1,0 +1,63 @@
+---
+SPDX-License-Identifier: CC-BY-SA-4.0
+SPDX-FileCopyrightText: 2025 seL4 Project a Series of LF Projects, LLC.
+title: Platform Support Overview
+sub: '
+<p>
+  seL4 is available for a wide range of platforms on Arm, RISC-V, and Intel
+  architectures. The kernel is intended to run on hardware ranging from small IoT
+  boards to server class machines, with current focus on the embedded space.
+</p>'
+img: '/images/cpu.jpg'
+alt: "futuristic picture of a CPU on a circuit board"
+img_class: "w-4/5"
+layout: card
+---
+
+<div class="theprose mx-auto">
+  <p>
+    seL4 runs on the following hardware:
+  </p>
+  <ul>
+    {% for platform in site.data.platforms %}
+      <li><strong>{{ platform[0] }}</strong>:
+        {% for name in platform[1] %}
+        {{ name }}{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      </li>
+    {% endfor %}
+  </ul>
+  <p>
+    Virtualisation and SMP multicore support is available on most of these
+    boards. Note that the formal verification does not apply to all
+    configurations and platforms. For details on the exact feature and verification
+    support status see the <a
+    href="https://docs.sel4.systems/Hardware/">detailed supported platforms
+    list</a>
+    on the seL4 docsite.
+  </p>
+  <p>
+    Qemu simulator support is available for all of the architectures above.
+  </p>
+</div>
+
+{% include section-start.html
+    heading='Need seL4 on a new platform?'
+    id='listed'
+    margins='pt-8 sm:pt-16'
+%}
+<div class="theprose mx-auto">
+  <p>
+    Platform ports can be contracted
+    from one of the <a href="{% link Services/index.html %}">endorsed
+    seL4 service providers</a>!
+  </p>
+  <p>
+    Instructions for performing your own platform port are available in the <a
+    href="https://docs.sel4.systems/projects/sel4/porting">seL4 porting guide</a>, and
+    requirements for contributing platform ports are described on the
+    <a href="{% link Contribute/platform-ports.md %}">platform contributions</a> page.
+  </p>
+</div>
+
+{% include section-end.html %}

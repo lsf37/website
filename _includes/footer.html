@@ -1,0 +1,58 @@
+{%- comment %}
+Copyright 2025 Proofcraft Pty Ltd
+SPDX-License-Identifier: CC-BY-SA-4.0
+{% endcomment -%}
+<footer class="bg-gray-900" aria-labelledby="footer-heading">
+  <h2 id="footer-heading" class="sr-only">Footer</h2>
+  <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+    <div class="ml-10 lg:grid lg:grid-cols-2 lg:gap-8">
+      <div class="space-y-8">
+        <img class="h-12" src="{{ '/images/seL4.svg' | relative_url }}" alt="seL4 logo">
+        <p class="text-sm leading-6 text-gray-300">Proof. Performance. Security.</p>
+        <!-- socials -->
+        <div class="flex space-x-6">
+          <a href="https://www.linkedin.com/company/sel4" title="seL4 on LinkedIn"
+             class="text-gray-500 hover:text-gray-400">
+            {% svg _icons/other/linkedin.svg class="h-6 w-6" %}
+          </a>
+          <a href="https://www.youtube.com/@seL4" title="seL4 on YouTube"
+             class="text-gray-500 hover:text-gray-400">
+            {% svg _icons/other/youtube.svg class="h-6 w-6" %}
+          </a>
+          <a href="https://github.com/seL4" title="seL4 on GitHub"
+             class="text-gray-500 hover:text-gray-400">
+            {% svg _icons/other/github.svg class="h-6 w-6" %}
+          </a>
+        </div>
+      </div>
+      <!-- footer menu -->
+      <div class="mt-16 flex flex-wrap gap-8 lg:mt-0">
+{%- for f in footer -%}
+{%-   assign menu_name = f[0] -%}
+{%-   assign links = f[1] -%}
+        <div class="flex-none">
+          <h3 class="text-md font-semibold leading-6 text-logogreen">{{ menu_name }}</h3>
+          <ul class="mt-6 space-y-4">
+{%-   for l in links -%}
+{%-     assign name = l[0] -%}
+{%-     assign url = l[1] -%}
+            <li>
+              <a href="{{ url | relative_url }}" class="text-sm leading-6 text-gray-300 hover:text-white">{{ name }}</a>
+            </li>
+{%-   endfor -%}
+          </ul>
+        </div>
+{%- endfor -%}
+      </div>
+    </div>
+    <div class="flex flex-row flex-wrap gap-x-3 mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+      <p class="flex-none max-w-full text-tiny sm:text-xs leading-5 text-gray-400">&copy; {{"now" | date: "%Y"}} seL4 Project a Series of LF Projects, LLC. seL4 is a trademark of LF Projects, LLC.</p>
+      {%- if site.on_seL4 %}
+      <div class="flex-1"></div>
+      <p class="flex-none text-tiny sm:text-xs leading-5 text-gray-400">
+        Served on seL4. <a href="/About/webserver.html" class="underline">About this web server.</a>
+      </p>
+      {% endif -%}
+    </div>
+  </div>
+</footer>

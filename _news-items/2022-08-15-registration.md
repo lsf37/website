@@ -4,14 +4,15 @@
 title: Register for the seL4 Summit!
 anchor: registration-open
 
-link: ../Foundation/Summit/2022/
+link: /Summit/2022/
 img: /images/sel4-summit-logo.svg
-alt: seL4 summit
+alt: seL4 Summit
+dark: true
 ---
 
 This hybrid event will be held in Munich, Germany, 10-13 October 2022.
 
-The seL4 summit will cover the complete seL4 ecosystem, consisting of the
+The seL4 Summit will cover the complete seL4 ecosystem, consisting of the
 verified microkernel, as well as all seL4-related technology, tools,
 infrastructure, products, projects, and people.
 
@@ -35,5 +36,5 @@ level of involvement.
 
 <div style="text-align: center">
   <a href="https://hopin.com/events/sel4-summit-2022/registration"
-     class="highlight" >Register for the seL4 Summit 2022!</a>
+     class="emph" >Register for the seL4 Summit 2022!</a>
 </div>

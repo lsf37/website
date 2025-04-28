@@ -1,0 +1,18 @@
+{%- comment %}
+Copyright 2025 Proofcraft Pty Ltd
+SPDX-License-Identifier: CC-BY-SA-4.0
+{% endcomment -%}
+{% assign affiliation = '<a href="' | append: include.affiliation_link | append: '">'
+                                    | append: include.affiliation
+                                    | append: '</a>' %}
+{% assign details = "<em>" | append: include.role | append: ", "
+                           | append: affiliation | append: "</em>" %}
+{% assign img = '/Foundation/Board/' | append: include.img %}
+{% include bio-item.html
+    name = include.name
+    details = details
+    img = img
+    bio = include.bio
+    mastodon = include.mastodon
+    linkedin = include.linkedin
+%}

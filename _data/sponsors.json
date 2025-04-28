@@ -1,0 +1,107 @@
+{
+  "summit-2024":
+    {
+      "gold": [
+        {
+          "name": "Kry10",
+          "logo": "Kry10.svg",
+          "url": "https://www.kry10.com/"
+        }
+      ],
+      "silver": [
+        {
+          "name": "Apple",
+          "logo": "apple.svg",
+          "url": "https://apple.com/"
+        },
+        {
+          "name": "NIO",
+          "logo": "NIO.svg",
+          "url": "https://www.nio.com"
+        }
+      ],
+      "bronze": [
+      {
+        "name": "Collins Aerospace",
+        "logo": "Collins_Aerospace_Logo.svg",
+        "url": "https://www.collinsaerospace.com"
+      },
+      {
+        "name": "Proofcraft",
+        "logo": "proofcraft.svg",
+        "url": "https://proofcraft.systems"
+      },
+      {
+        "name": "TII",
+        "logo": "TII.svg",
+        "url": "https://www.tii.ae/"
+      },
+      {
+        "name": "UNSW Sydney",
+        "logo": "UNSW.svg",
+        "url": "https://unsw.edu.au"
+      }
+      ]
+    },
+  "summit-2023":
+    {
+      "gold": [
+      {
+        "name": "Kry10",
+        "logo": "Kry10.svg",
+        "url": "https://www.kry10.com/"
+      },
+      {
+        "name": "NIO",
+        "logo": "NIO.svg",
+        "url": "https://www.nio.com"
+      },
+      {
+        "name": "TII",
+        "logo": "TII.svg",
+        "url": "https://www.tii.ae/"
+      }
+      ],
+      "silver": [
+      {
+        "name": "Collins Aerospace",
+        "logo": "Collins_Aerospace_Logo.svg",
+        "url": "https://www.collinsaerospace.com"
+      }
+      ],
+      "dinner": [
+      {
+        "name": "NIO",
+        "logo": "NIO.svg",
+        "url": "https://www.nio.com"
+      }
+      ],
+      "reception": [
+      {
+        "name": "NIO",
+        "logo": "NIO.svg",
+        "url": "https://www.nio.com"
+      }
+      ]
+    },
+  "summit-2022":
+    {
+      "bronze": [
+      {
+        "name": "DornerWorks",
+        "logo": "DornerWorks.svg",
+        "url": "https://dornerworks.com/"
+      },
+      {
+        "name": "Horizon Robotics",
+        "logo": "Horizon_Robotics.svg",
+        "url": "https://en.horizon.auto/"
+      },
+      {
+        "name": "Xcalibyte",
+        "logo": "xcalibyte.svg",
+        "url": "https://xcalibyte.com"
+      }
+    ]
+    }
+}

@@ -19,4 +19,7 @@ gem "bigdecimal"
 group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem 'jekyll-redirect-from'
+  gem "jekyll-postcss-v2"
+  gem "jekyll-inline-svg"
+  gem "jekyll-toc"
 end
